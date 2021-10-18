@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const About = () => {
   return (
-    <div className="we-are-block">
+    <div className="we-are-block" id="about">
       <div id="about-us-section">
         <div className="about-us-image">
           <img src={about1} alt="Lobby Image" />

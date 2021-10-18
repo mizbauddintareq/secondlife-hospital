@@ -11,7 +11,7 @@ const Services = () => {
       .then((data) => setFacilities(data));
   }, []);
   return (
-    <div id="#service">
+    <div id="service">
       <div
         className="text-center"
         style={{ marginTop: "75px", color: "#0c4c91" }}
@@ -30,7 +30,7 @@ const Services = () => {
       </div>
       <Row xs={1} md={2} lg={4} className="g-4">
         {facilities.map((service) => (
-          <Col>
+          <Col key={service.id}>
             <Card className="h-100 shadow bg-body rounded">
               <Card.Img variant="top" src={service.thumb} />
               <Card.Body style={{ color: "#0c4c91" }}>

@@ -7,6 +7,7 @@ import {
   onAuthStateChanged,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  GithubAuthProvider,
 } from "firebase/auth";
 
 import initializeAuthentication from "../Login/firebase.init";
@@ -25,6 +26,12 @@ const useFirebase = () => {
     return signInWithPopup(auth, googleProvider);
   };
 
+  // github login
+  const handleGithubLogin = () => {
+    const githubProvider = new GithubAuthProvider();
+    return signInWithPopup(auth, githubProvider);
+  };
+
   // user registration
   const handleUserRegistration = (email, password) => {
     return createUserWithEmailAndPassword(auth, email, password);
@@ -34,6 +41,7 @@ const useFirebase = () => {
   const handleUserLogin = (email, password) => {
     return signInWithEmailAndPassword(auth, email, password);
   };
+
   //   logout
   const handleLogout = () => {
     setIsLoading(true);
@@ -47,7 +55,7 @@ const useFirebase = () => {
       .finally(() => setIsLoading(false));
   };
 
-  // observe
+  // observe state change
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
@@ -70,6 +78,7 @@ const useFirebase = () => {
     handleUserLogin,
     isLoading,
     setIsLoading,
+    handleGithubLogin,
   };
 };
 

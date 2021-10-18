@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { useHistory, useLocation } from "react-router";
-
+import { getAuth, updateProfile } from "firebase/auth";
 import useAuth from "../context/useAuth";
-
+import initializeAuthentication from "../Login/firebase.init";
+initializeAuthentication();
 const Registration = () => {
   const location = useLocation();
   const history = useHistory();
@@ -10,17 +11,28 @@ const Registration = () => {
   const { handleUserRegistration } = useAuth();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [name, setName] = useState("");
 
-  const handleEmail = (e) => {
+  const handleEmailChange = (e) => {
     setEmail(e.target.value);
   };
-  const handlePassword = (e) => {
+  const handlePasswordChange = (e) => {
     setPassword(e.target.value);
+  };
+  const handleNameChange = (e) => {
+    setName(e.target.value);
+  };
+  const auth = getAuth();
+  const setUserName = () => {
+    updateProfile(auth.currentUser, {
+      displayName: name,
+    }).then((result) => {});
   };
 
   const handleRegistration = () => {
     handleUserRegistration(email, password).then((result) => {
       history.push(redirect_uri);
+      setUserName();
     });
   };
   return (
@@ -30,12 +42,23 @@ const Registration = () => {
         <h2 className="title">Sign Up</h2>
 
         <div className="email-login">
+          <label htmlFor="name">
+            {" "}
+            <b>Name</b>
+          </label>
+          <input
+            onBlur={handleNameChange}
+            type="text"
+            placeholder="Enter Name"
+            name="uname"
+            required
+          />
           <label htmlFor="email">
             {" "}
             <b>Email</b>
           </label>
           <input
-            onBlur={handleEmail}
+            onBlur={handleEmailChange}
             type="text"
             placeholder="Enter Email"
             name="uname"
@@ -45,7 +68,7 @@ const Registration = () => {
             <b>Password</b>
           </label>
           <input
-            onBlur={handlePassword}
+            onBlur={handlePasswordChange}
             type="password"
             placeholder="Enter Password"
             name="psw"

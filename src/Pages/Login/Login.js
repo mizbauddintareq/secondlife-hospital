@@ -4,23 +4,31 @@ import { Link, useLocation, useHistory } from "react-router-dom";
 import useAuth from "../context/useAuth";
 import "./Login.css";
 const Login = () => {
-  const { error, setError, handleGoogleLogin, handleUserLogin, setIsLoading } =
-    useAuth();
+  const {
+    error,
+    setError,
+    handleGoogleLogin,
+    handleUserLogin,
+    setIsLoading,
+    handleGithubLogin,
+  } = useAuth();
   const location = useLocation();
-
   const history = useHistory();
   const redirect_uri = location.state?.from || "/";
-
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleEmail = (e) => {
+  // email change
+  const handleEmailChange = (e) => {
     setEmail(e.target.value);
   };
-  const handlePassword = (e) => {
+
+  // password change
+  const handlePasswordChange = (e) => {
     setPassword(e.target.value);
   };
 
+  //user login
   const handlelogin = () => {
     handleUserLogin(email, password)
       .then((result) => {
@@ -32,8 +40,22 @@ const Login = () => {
       });
   };
 
+  // google login
   const handleGoogleSingin = () => {
     handleGoogleLogin()
+      .then((result) => {
+        history.push(redirect_uri);
+        setError("");
+      })
+      .catch((error) => {
+        setError(error.message);
+      })
+      .finally(() => setIsLoading(false));
+  };
+
+  // github login
+  const handleGithubSingin = () => {
+    handleGithubLogin()
       .then((result) => {
         history.push(redirect_uri);
         setError("");
@@ -63,7 +85,7 @@ const Login = () => {
               />
               <p className="btn-text">Sign in with Google</p>
             </button>
-            <button className="fb-btn">
+            <button onClick={handleGithubSingin} className="fb-btn">
               <img
                 alt="FB"
                 src="https://i.ibb.co/WxWRRgb/Git-Hub-Mark-32px.png"
@@ -81,7 +103,7 @@ const Login = () => {
               <b>Email</b>
             </label>
             <input
-              onBlur={handleEmail}
+              onBlur={handleEmailChange}
               type="text"
               placeholder="Enter Email"
               name="uname"
@@ -91,7 +113,7 @@ const Login = () => {
               <b>Password</b>
             </label>
             <input
-              onBlur={handlePassword}
+              onBlur={handlePasswordChange}
               type="password"
               placeholder="Enter Password"
               name="psw"
