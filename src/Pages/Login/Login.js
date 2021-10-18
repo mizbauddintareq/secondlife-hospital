@@ -1,15 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import useAuth from "../context/useAuth";
 import "./Login.css";
 const Login = () => {
-  const { handleGoogleLogin } = useAuth();
+  const { error, handleGoogleLogin, handleUserLogin } = useAuth();
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleEmail = (e) => {
+    setEmail(e.target.value);
+  };
+  const handlePassword = (e) => {
+    setPassword(e.target.value);
+  };
+
+  const handlelogin = () => {
+    handleUserLogin(email, password);
+  };
+
   return (
     //   login component
     <Container>
       <div className="form-card row">
-        <Form className="col-12">
+        <div className="col-12">
+          <p className="text-danger">{error}</p>
           <h2 className="title"> Log in</h2>
           <p className="subtitle">
             Don't have an account? <Link to="/registration"> sign Up</Link>
@@ -41,6 +57,7 @@ const Login = () => {
               <b>Email</b>
             </label>
             <input
+              onBlur={handleEmail}
               type="text"
               placeholder="Enter Email"
               name="uname"
@@ -50,16 +67,21 @@ const Login = () => {
               <b>Password</b>
             </label>
             <input
+              onBlur={handlePassword}
               type="password"
               placeholder="Enter Password"
               name="psw"
               required
             />
           </div>
-          <button className="cta-btn">Login</button>
+          <button onClick={handlelogin} className="cta-btn">
+            Login
+          </button>
 
-          <a className="forget-pass">Forgot password?</a>
-        </Form>
+          <Link to="#" className="forget-pass">
+            Forgot password?
+          </Link>
+        </div>
       </div>
     </Container>
   );

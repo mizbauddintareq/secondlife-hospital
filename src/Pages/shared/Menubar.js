@@ -20,7 +20,7 @@ const Menubar = () => {
                 Home
               </Nav.Link>
               <Nav.Link href="#about">About</Nav.Link>
-              <Nav.Link href="#service">Service</Nav.Link>
+              <Nav.Link herf="service">Service</Nav.Link>
               <Nav.Link href="#contact">Contact Us</Nav.Link>
               {user.email && <Nav.Link>Welcome {user.displayName}</Nav.Link>}
             </Nav>

@@ -13,7 +13,7 @@ const About = () => {
         </div>
 
         <div className="about-us-info">
-          <h2>We are Digital Upgrade</h2>
+          <h2>Welcome To Second Life General Hospital</h2>
 
           <p>
             Digital Upgrade, located in Evansville, IN, makes it easy for
@@ -25,7 +25,7 @@ const About = () => {
             ourselves on outcomes, not on sales.
           </p>
 
-          <Link href="#" title="About Us Button">
+          <Link to="#" title="About Us Button">
             ABOUT US
           </Link>
         </div>
@@ -47,7 +47,7 @@ const About = () => {
             completed to preserve this local piece of Evansville, IN history.
           </p>
 
-          <Link href="#" title="History Button">
+          <Link to="#" title="History Button">
             HISTORY
           </Link>
         </div>
