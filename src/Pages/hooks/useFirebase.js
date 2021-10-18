@@ -15,51 +15,36 @@ initializeAuthentication();
 const useFirebase = () => {
   const [user, setUser] = useState({});
   const [error, setError] = useState("");
+  const [isLoading, setIsLoading] = useState(true);
   const auth = getAuth();
 
   //   google login
   const handleGoogleLogin = () => {
+    setIsLoading(true);
     const googleProvider = new GoogleAuthProvider();
-    signInWithPopup(auth, googleProvider)
-      .then((result) => {
-        setUser(result.user);
-      })
-      .catch((error) => {
-        setError(error.message);
-      });
+    return signInWithPopup(auth, googleProvider);
   };
 
   // user registration
   const handleUserRegistration = (email, password) => {
-    createUserWithEmailAndPassword(auth, email, password)
-      .then((result) => {
-        setUser(result.user);
-      })
-      .catch((error) => {
-        setError(error.message);
-      });
+    return createUserWithEmailAndPassword(auth, email, password);
   };
 
   // user login
   const handleUserLogin = (email, password) => {
-    signInWithEmailAndPassword(auth, email, password)
-      .then((result) => {
-        setUser(result.user);
-        setError("");
-      })
-      .catch((error) => {
-        setError(error.message);
-      });
+    return signInWithEmailAndPassword(auth, email, password);
   };
   //   logout
   const handleLogout = () => {
+    setIsLoading(true);
     signOut(auth)
       .then(() => {
         setUser({});
       })
       .catch((error) => {
         setError("");
-      });
+      })
+      .finally(() => setIsLoading(false));
   };
 
   // observe
@@ -70,6 +55,7 @@ const useFirebase = () => {
       } else {
         setError(error);
       }
+      setIsLoading(false);
     });
     return unsubscribe;
   }, []);
@@ -77,10 +63,13 @@ const useFirebase = () => {
   return {
     user,
     error,
+    setError,
     handleGoogleLogin,
     handleLogout,
     handleUserRegistration,
     handleUserLogin,
+    isLoading,
+    setIsLoading,
   };
 };
 

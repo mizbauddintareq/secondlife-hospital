@@ -1,8 +1,12 @@
 import React, { useState } from "react";
+import { useHistory, useLocation } from "react-router";
 
 import useAuth from "../context/useAuth";
 
 const Registration = () => {
+  const location = useLocation();
+  const history = useHistory();
+  const redirect_uri = location.state?.from || "/";
   const { handleUserRegistration } = useAuth();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -15,7 +19,9 @@ const Registration = () => {
   };
 
   const handleRegistration = () => {
-    handleUserRegistration(email, password);
+    handleUserRegistration(email, password).then((result) => {
+      history.push(redirect_uri);
+    });
   };
   return (
     //   registration form

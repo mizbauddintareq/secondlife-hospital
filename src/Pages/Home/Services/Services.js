@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Button, Card, Col, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const Services = () => {
   const [facilities, setFacilities] = useState([]);
@@ -41,6 +42,8 @@ const Services = () => {
                   <small>{service.text.slice(0, 140)}</small>{" "}
                 </Card.Text>
                 <Button
+                  as={Link}
+                  to={`/service/${service.id}`}
                   className="service-btn"
                   style={{ backgroundColor: "#0c4c91" }}
                 >
