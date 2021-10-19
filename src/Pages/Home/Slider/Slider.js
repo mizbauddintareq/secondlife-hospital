@@ -7,7 +7,7 @@ import slider3 from "../../../images/slider-3.jpg";
 const Slider = () => {
   return (
     // slider component
-    <div>
+    <div className="pt-5">
       <Carousel fade>
         <Carousel.Item>
           <img className="d-block w-100" src={slider1} alt="First slide" />

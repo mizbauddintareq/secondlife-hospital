@@ -1,5 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
+import Blogs from "./Pages/Blogs/Blogs";
 import ContactUs from "./Pages/Contact Us/ContactUs";
 import AuthProvider from "./Pages/context/AuthProvider";
 import Home from "./Pages/Home/Home/Home";
@@ -34,6 +36,9 @@ function App() {
           </PrivateRoute>
           <PrivateRoute path="/contact">
             <ContactUs></ContactUs>
+          </PrivateRoute>
+          <PrivateRoute path="/blog">
+            <Blogs></Blogs>
           </PrivateRoute>
           <Route path="*">
             <NotFound></NotFound>

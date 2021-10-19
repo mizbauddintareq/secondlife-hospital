@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "tittle": "Stuttering in children: How parents can help",
+    "text": "Developmental stuttering, the most common form of this speech disorder, happens as children are learning speech and language skills. Stuttering can be caused by a brain injury, but that’s far less common. Contrary to what many people believe, it is rare for stuttering to be caused by psychological factors.",
+    "publish": "21 Jan 2021",
+    "author": "Andrew Jhon",
+    "thumb": "https://i.ibb.co/DLftR1g/pexels-alexander-dummer-1912868.jpg"
+  },
+  {
+    "id": 2,
+    "tittle": "Thinking about COVID booster shots? Here’s what to know",
+    "text": "Vaccination against the virus that causes COVID-19 is the most important lifesaving tool we have in this pandemic. Fortunately, the vaccines authorized in the US have proven remarkably safe and effective. And we’ve known from the start that the strong protection they provide would likely wane over time.",
+    "publish": "24 Feb 2021",
+    "author": "Robert H. Shmerling",
+    "thumb": "https://i.ibb.co/pfw24vv/pexels-edward-jenner-4031867.jpg"
+  },
+  {
+    "id": 3,
+    "tittle": "Diagnosing and treating this dizzying syndrome",
+    "text": "Measuring blood pressure and heart rate while lying down, then while standing (orthostatic vital signs) can help cardiologists like me diagnose POTS. Within 10 minutes of standing, the heart rate rises at least 30 beats per minute (bpm) in POTS and, importantly, the blood pressure remains stable (systolic blood pressure drops by no more than 20 mm Hg).",
+    "publish": "3 Oct 2021",
+    "author": "Mario Silvia",
+    "thumb": "https://i.ibb.co/chDwvcT/pexels-karolina-grabowska-6214833.jpg"
+  },
+  {
+    "id": 4,
+    "tittle": "Did we really gain weight during the pandemic?",
+    "text": "Some people respond to stress by not eating. These people ignore their hunger cues, and so some lose weight during times of stress. As it turns out, the electronic health record analysis revealed that 35% of patients lost weight during the first year of the pandemic. Few people were complaining about losing weight, so we heard less about it. The reasons for this are likely multifaceted.",
+    "publish": "08 Jun 2020",
+    "author": " Elizabeth Pegg Frates",
+    "thumb": "https://i.ibb.co/0D0cWgM/pexels-mart-production-8433473.jpg"
+  },
+  {
+    "id": 5,
+    "tittle": "Why try for a vaginal birth after a cesarean?",
+    "text": "Developmental stuttering, the most common form of this speech disorder, happens as children are learning speech and language skills. Stuttering can be caused by a brain injury, but that’s far less common. Contrary to what many people believe, it is rare for stuttering to be caused by psychological factors.",
+    "publish": "30 Sep 2021",
+    "author": " Rachel A. Blake",
+    "thumb": "https://i.ibb.co/0VCdwT6/pexels-pixabay-51953.jpg"
+  },
+  {
+    "id": 6,
+    "tittle": "Poverty, homelessness, and stigma make addiction more deadly",
+    "text": "A common saying is that addiction doesn’t discriminate, which means that it can affect anyone from any sphere of life, ranging from coal miners and truck drivers to executives, doctors, and lawyers. I have personal experience with what an equal-opportunity destroyer of well-being and happiness addiction can be, as I am 14 years into recovery from a vicious addiction to prescription painkillers.",
+    "publish": "16 May 2021",
+    "author": " Peter Grinspoon",
+    "thumb": "https://i.ibb.co/6PNfKvN/pexels-dazzle-jam-1125850.jpg"
+  }
+]

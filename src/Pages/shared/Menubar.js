@@ -9,15 +9,22 @@ const Menubar = () => {
   return (
     // navbar component
     <>
-      <Navbar variant="dark" expand="lg" style={{ backgroundColor: "#0c4c91" }}>
+      <Navbar
+        fixed="top"
+        variant="dark"
+        expand="lg"
+        style={{ backgroundColor: "#0c4c91" }}
+      >
         <Container>
           <Navbar.Brand as={Link} to="/">
-            SECOND LIFE HOSPITAL
+            <span style={{ fontFamily: "Megrim", fontWeight: "bold" }}>
+              SECOND LIFE HOSPITAL
+            </span>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav className="ms-auto my-2 my-lg-0" navbarScroll>
-              <Nav.Link as={Link} to="/home">
+              <Nav.Link as={HashLink} to="/home">
                 Home
               </Nav.Link>
               <Nav.Link as={HashLink} to="/home#about">
@@ -26,7 +33,13 @@ const Menubar = () => {
               <Nav.Link as={HashLink} to="/home#service">
                 Service
               </Nav.Link>
-              <Nav.Link as={Link} to="/contact">
+              <Nav.Link as={HashLink} to="/blog">
+                Blogs
+              </Nav.Link>
+              <Nav.Link as={HashLink} to="/home#review">
+                Reviews
+              </Nav.Link>
+              <Nav.Link as={HashLink} to="/contact">
                 Contact Us
               </Nav.Link>
               {user.email && <Nav.Link>Welcome {user.displayName}</Nav.Link>}

@@ -16,7 +16,7 @@ const Service = () => {
   const serviceDetail = details.filter((info) => info.id == detailId);
 
   return (
-    <div className="row text-center my-5">
+    <div className="row text-center" style={{ marginTop: "100px" }}>
       <div className="col-md-5 mx-auto">
         <Row xs={1} md={1} className="g-4">
           <Col>

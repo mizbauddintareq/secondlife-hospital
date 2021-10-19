@@ -8,27 +8,29 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const ContactUs = () => {
   return (
-    <div>
+    <div style={{ marginTop: "100px" }}>
       <section className="container-fluid  mt-5">
         <div className="row">
           {/* contact text center */}
-          <div className="col-sm-12 text-center mb-4">
+          <div className="col-sm-12 text-center mb-4 ">
             <h1
               style={{
                 color: "#0077B6",
+                fontWeight: "bold",
+                textTransform: "uppercase",
               }}
             >
               Contact Us
             </h1>
             <hr className="w-25 mx-auto text-info" />
-            <p
+            <h3
               style={{
                 color: "#0077B6",
               }}
             >
               If you have got any question about any of our programmes let us
               know
-            </p>
+            </h3>
           </div>
 
           {/* contact form */}

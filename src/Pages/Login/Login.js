@@ -68,7 +68,7 @@ const Login = () => {
 
   return (
     //   login component
-    <Container>
+    <Container style={{ marginTop: "100px" }}>
       <div className="form-card row">
         <div className="col-12">
           <p className="text-danger">{error}</p>

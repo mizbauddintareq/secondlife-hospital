@@ -13,12 +13,12 @@ const Services = () => {
   return (
     <div id="service">
       <div
-        className="text-center"
+        className="text-center "
         style={{ marginTop: "75px", color: "#0c4c91" }}
       >
-        <h1 className="text-uppercase">our services</h1>
+        <h1 className="text-uppercase fw-bold">our services</h1>
         <hr className="w-25 mx-auto" />
-        <p>
+        <p style={{ fontSize: "18px", fontWeight: "bold" }}>
           Hospital management system is a computer system that helps manage the
           information related to health care and aids in the job completion of
           health care providers effectively. They manage the data related to all
@@ -28,7 +28,7 @@ const Services = () => {
           surgical mission of a hospital or hospital system.
         </p>
       </div>
-      <Row xs={1} md={2} lg={4} className="g-4">
+      <Row xs={1} md={2} lg={4} className="g-5 mt-3">
         {facilities.map((service) => (
           <Col key={service.id}>
             <Card className="h-100 shadow bg-body rounded">
@@ -39,7 +39,7 @@ const Services = () => {
                 </Card.Title>
                 <Card.Text>
                   {" "}
-                  <small>{service.text.slice(0, 140)}</small>{" "}
+                  <small>{service.text.slice(0, 130)}...</small>{" "}
                 </Card.Text>
                 <Button
                   as={Link}

@@ -6,50 +6,58 @@ import { Link } from "react-router-dom";
 
 const About = () => {
   return (
-    <div className="we-are-block" id="about">
-      <div id="about-us-section">
-        <div className="about-us-image">
-          <img src={about1} alt="Lobby Image" />
-        </div>
-
-        <div className="about-us-info">
-          <h2>Welcome To Second Life General Hospital</h2>
-
-          <p>
-            Digital Upgrade, located in Evansville, IN, makes it easy for
-            businesses to create and manage their digital presence and
-            logistics, meaning we can make your business more efficient and
-            profitable! We believe in our community and want to help our local
-            business economy grow and expand. We believe in our clients, and
-            want to assist in their digital success. The D-UP team grades
-            ourselves on outcomes, not on sales.
-          </p>
-
-          <Link to="#" title="About Us Button">
-            ABOUT US
-          </Link>
-        </div>
+    <div style={{ marginTop: "80px" }}>
+      <div className="my-5 text-center" style={{ color: "#0c4c91" }}>
+        <h1 className="text-uppercase fw-bold">
+          Know About Second Life General Hospital
+        </h1>
       </div>
+      <div className="we-are-block" id="about">
+        <div id="about-us-section">
+          <div className="about-us-image">
+            <img src={about1} alt="Lobby Image" />
+          </div>
 
-      <div id="history-section">
-        <div className="history-image">
-          <img src={about2} alt="Building Pic" />
+          <div className="about-us-info">
+            <h2>Welcome To Our Hospital</h2>
+
+            <p>
+              Hospital may be compared by the number of beds they contain.
+              Modern hospitals tend to rarely exceed 800 beds, and though some
+              integrated health facilities may have more beds, they often
+              comprise multiple geographic locations, each with several hundred
+              beds. In the early 21st century, it was thought that a facility of
+              800 beds was the largest unit that could be governed
+              satisfactorily from a single administrative unit while maintaining
+              a corporate unity.
+            </p>
+
+            <Link to="#" title="About Us Button">
+              ABOUT US
+            </Link>
+          </div>
         </div>
 
-        <div className="history-info">
-          <h2>Preserving Local History</h2>
+        <div id="history-section">
+          <div className="history-image">
+            <img src={about2} alt="Building Pic" />
+          </div>
 
-          <p>
-            In 2018, technology companies, Desktop Doctors & Digital Upgrade
-            found a new place to call home, at 816 N. 9th Ave. Since the
-            takeover of the 118-year-old building (formally Stippler Tool &
-            Supply and Crown Chair Company), there have been many renovations
-            completed to preserve this local piece of Evansville, IN history.
-          </p>
+          <div className="history-info">
+            <h2>Preserving Local History</h2>
 
-          <Link to="#" title="History Button">
-            HISTORY
-          </Link>
+            <p>
+              When was the hospital invented Hospices, initially built to
+              shelter pilgrims and messengers between various bishops, were
+              under Christian control developed into hospitals in the modern
+              sense of the word. In Rome itself, the first hospital was built in
+              the 4th century AD by a wealthy penitent widow, Fabiola.
+            </p>
+
+            <Link to="#" title="History Button">
+              HISTORY
+            </Link>
+          </div>
         </div>
       </div>
     </div>

@@ -9,8 +9,8 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faFacebookSquare,
+  faFirefoxBrowser,
   faInstagramSquare,
-  faLinkedinIn,
   faTwitterSquare,
   faYoutubeSquare,
 } from "@fortawesome/free-brands-svg-icons";
@@ -18,101 +18,129 @@ import {
 const Footer = () => {
   return (
     <div
-      className=" text-white pt-5 pb-4"
-      style={{ backgroundColor: "#0c4c91", marginTop: "100px" }}
+      className="  pt-5 pb-4"
+      style={{
+        backgroundColor: "#0c4c91",
+        color: "#ced4da",
+        marginTop: "100px",
+      }}
     >
       <div className="container text-center text-md-start">
         <div className="row text-center text-md-start">
           <div className="col-md-3 mx-auto mt-3">
-            <h5 className="text-uppercase mb-4 fw-bold text-warning">
-              company name
+            <h5 className="text-uppercase mb-4 fw-bold text-white">
+              second life general hospital
             </h5>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Blanditiis doloribus, impedit sapiente, culpa possimus soluta
-              similique voluptas asperiores repudiandae consequatur quos nostrum
-              vel consectetur assumenda dicta praesentium eius! Eveniet est
-              facilis error doloremque aliquid deserunt laudantium ducimus hic
-              molestiae ipsam? Deleniti nisi neque numquam quasi temporibus
-              repellat asperiores cupiditate harum!
+              Hospitals may be compared and classified in various ways: by
+              ownership and control, by type of service rendered, by length of
+              stay, by size, or by facilities and administration provided.
+              Examples include the general hospital, the specialized hospital,
+              the short-stay hospital, and the long-term-care facility.
             </p>
           </div>
 
           <div className="col-md-3 mx-auto mt-3">
-            <h5 className="text-uppercase mb-4 fw-bold text-warning">
-              services
-            </h5>
+            <h5 className="text-uppercase mb-4 fw-bold text-white">services</h5>
             <p>
               {" "}
-              <Link className="text-white">The Prividers</Link>{" "}
+              <Link to="#" style={{ color: "#ced4da" }}>
+                Nephrologist Care
+              </Link>{" "}
             </p>
             <p>
               {" "}
-              <Link className="text-white">The Prividers</Link>{" "}
+              <Link to="#" style={{ color: "#ced4da" }}>
+                Eye Care
+              </Link>{" "}
             </p>
             <p>
               {" "}
-              <Link className="text-white">The Prividers</Link>{" "}
+              <Link to="#" style={{ color: "#ced4da" }}>
+                Pediatrician Clinic
+              </Link>{" "}
             </p>
             <p>
               {" "}
-              <Link className="text-white">The Prividers</Link>{" "}
+              <Link to="#" style={{ color: "#ced4da" }}>
+                Prenatal Care
+              </Link>{" "}
             </p>
             <p>
               {" "}
-              <Link className="text-white">The Prividers</Link>{" "}
+              <Link to="#" style={{ color: "#ced4da" }}>
+                Medical Counseling"
+              </Link>{" "}
             </p>
             <p>
               {" "}
-              <Link className="text-white">The Prividers</Link>{" "}
+              <Link to="#" style={{ color: "#ced4da" }}>
+                Rehabilitation Center
+              </Link>{" "}
             </p>
           </div>
 
           <div className="col-md-3 mx-auto mt-3">
-            <h5 className="text-uppercase mb-4 fw-bold text-warning">
+            <h5 className="text-uppercase mb-4 fw-bold text-white">
               useful links
             </h5>
             <p>
               {" "}
-              <Link className="text-white">The Prividers</Link>{" "}
+              <Link to="#" style={{ color: "#ced4da" }}>
+                Sign Up
+              </Link>{" "}
             </p>
             <p>
               {" "}
-              <Link className="text-white">The Prividers</Link>{" "}
+              <Link to="#" style={{ color: "#ced4da" }}>
+                Login
+              </Link>{" "}
             </p>
             <p>
               {" "}
-              <Link className="text-white">The Prividers</Link>{" "}
+              <Link to="#" style={{ color: "#ced4da" }}>
+                Privacy Policy
+              </Link>{" "}
             </p>
             <p>
               {" "}
-              <Link className="text-white">The Prividers</Link>{" "}
+              <Link to="#" style={{ color: "#ced4da" }}>
+                Terms & Conditions
+              </Link>{" "}
             </p>
             <p>
               {" "}
-              <Link className="text-white">The Prividers</Link>{" "}
+              <Link to="#" style={{ color: "#ced4da" }}>
+                Blogs
+              </Link>{" "}
             </p>
             <p>
               {" "}
-              <Link className="text-white">The Prividers</Link>{" "}
+              <Link to="#" style={{ color: "#ced4da" }}>
+                Developer
+              </Link>{" "}
             </p>
           </div>
 
           <div className="col-md-3 mx-auto mt-3">
-            <h5 className="text-uppercase mb-4 fw-bold text-warning">
+            <h5 className="text-uppercase mb-4 fw-bold text-white">
               contact information
             </h5>
             <p>
               <FontAwesomeIcon className="text-white" icon={faLocationArrow} />{" "}
-              cox'sbazar
+              Kolatoli, Cox's Bazar, Bangladesh
             </p>
             <p>
-              <FontAwesomeIcon className="text-white" icon={faPhone} /> 088
-              17553838
+              <FontAwesomeIcon className="text-white" icon={faPhone} /> 088 +880
+              1580541540
             </p>
             <p>
               <FontAwesomeIcon className="text-white" icon={faEnvelope} />{" "}
-              mail@gail.com
+              contact@secondlifehospital.com
+            </p>
+            <p>
+              <FontAwesomeIcon className="text-white" icon={faFirefoxBrowser} />{" "}
+              www.com
             </p>
           </div>
         </div>
@@ -121,7 +149,7 @@ const Footer = () => {
           <div className=" col-md-7 ">
             <p>
               {" "}
-              <span className="text-warning">Mizba Uddin Tareq</span> © 2019 All
+              <span className="text-warning">Mizba Uddin Tareq</span> © 2021 All
               Right Reserved
             </p>
           </div>

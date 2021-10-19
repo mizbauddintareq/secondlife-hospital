@@ -13,12 +13,17 @@ const Registration = () => {
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
 
+  // email change
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
   };
+
+  // password change
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
   };
+
+  // name change
   const handleNameChange = (e) => {
     setName(e.target.value);
   };
@@ -29,6 +34,7 @@ const Registration = () => {
     }).then((result) => {});
   };
 
+  // user registration
   const handleRegistration = () => {
     handleUserRegistration(email, password).then((result) => {
       history.push(redirect_uri);
@@ -37,7 +43,10 @@ const Registration = () => {
   };
   return (
     //   registration form
-    <div className="form-card container-fluid row">
+    <div
+      className="form-card container-fluid row"
+      style={{ marginTop: "100px" }}
+    >
       <div className="col-12">
         <h2 className="title">Sign Up</h2>
 
