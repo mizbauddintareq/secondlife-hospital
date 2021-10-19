@@ -9,7 +9,7 @@ const Menubar = () => {
   return (
     // navbar component
     <>
-      <Navbar bg="dark" variant="dark" expand="lg">
+      <Navbar variant="dark" expand="lg" style={{ backgroundColor: "#0c4c91" }}>
         <Container>
           <Navbar.Brand as={Link} to="/">
             SECOND LIFE HOSPITAL
@@ -26,15 +26,17 @@ const Menubar = () => {
               <Nav.Link as={HashLink} to="/home#service">
                 Service
               </Nav.Link>
-              <Nav.Link href="#contact">Contact Us</Nav.Link>
+              <Nav.Link as={Link} to="/contact">
+                Contact Us
+              </Nav.Link>
               {user.email && <Nav.Link>Welcome {user.displayName}</Nav.Link>}
             </Nav>
             {user.email ? (
-              <Button onClick={handleLogout} variant="warning">
+              <Button onClick={handleLogout} variant="light">
                 Logout
               </Button>
             ) : (
-              <Button as={Link} variant="warning" to="/login">
+              <Button as={Link} variant="light" to="/login">
                 Login
               </Button>
             )}

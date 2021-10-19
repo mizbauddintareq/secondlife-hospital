@@ -16,24 +16,41 @@ const Service = () => {
   const serviceDetail = details.filter((info) => info.id == detailId);
 
   return (
-    <div className="row text-center">
-      <div className="col-md-4 mx-auto">
+    <div className="row text-center my-5">
+      <div className="col-md-5 mx-auto">
         <Row xs={1} md={1} className="g-4">
           <Col>
-            <Card>
-              <Card.Img
-                variant="top"
-                src={serviceDetail[0]?.thumb}
-                style={{ height: "400px" }}
-              />
-              <Card.Body>
-                <Card.Title>{serviceDetail[0]?.name}</Card.Title>
-                <Card.Text>{serviceDetail[0]?.text}</Card.Text>
-                <Button as={Link} to="/">
-                  Continue
-                </Button>
-              </Card.Body>
-            </Card>
+            <div
+              className="card mb-3"
+              style={{ maxWidth: "540px" }}
+              style={{ backgroundColor: "#0077B6", color: "white" }}
+            >
+              <div className="row g-0">
+                <div className="col-md-4">
+                  <img
+                    src={serviceDetail[0]?.thumb}
+                    className="img-fluid rounded-start"
+                    alt="..."
+                  />
+                </div>
+                <div className="col-md-8">
+                  <div className="card-body">
+                    <h5 className="card-title text-uppercase">
+                      {serviceDetail[0]?.name}
+                    </h5>
+                    <p className="card-text">{serviceDetail[0]?.text}</p>
+                    <Button
+                      as={Link}
+                      to="/"
+                      variant="light"
+                      className="text-info"
+                    >
+                      Continue
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </Col>
         </Row>
       </div>
