@@ -149,7 +149,7 @@ const Footer = () => {
           <div className=" col-md-7 ">
             <p>
               {" "}
-              <span className="text-warning">Mizba Uddin Tareq</span> © 2021 All
+              <span className="text-white">Mizba Uddin Tareq</span> © 2021 All
               Right Reserved
             </p>
           </div>
