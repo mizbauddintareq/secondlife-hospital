@@ -38,6 +38,7 @@ const Registration = () => {
   const handleRegistration = () => {
     handleUserRegistration(email, password).then((result) => {
       history.push(redirect_uri);
+      window.location.reload();
       setUserName();
     });
   };
