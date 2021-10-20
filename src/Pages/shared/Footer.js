@@ -140,7 +140,7 @@ const Footer = () => {
             </p>
             <p>
               <FontAwesomeIcon className="text-white" icon={faFirefoxBrowser} />{" "}
-              www.com
+              www.second-life-hospital.web.app.com
             </p>
           </div>
         </div>

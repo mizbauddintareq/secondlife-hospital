@@ -29,7 +29,7 @@ const Blogs = () => {
                 className="col-md-9"
                 style={{ backgroundColor: "#0077B6", color: "white" }}
               >
-                <h2 className="card-tittle mt-2">{news.tittle}</h2>
+                <h3 className="card-tittle mt-2">{news.tittle}</h3>
                 <small className="" style={{ color: "#ced4da" }}>
                   {" "}
                   Published
